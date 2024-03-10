@@ -18,7 +18,7 @@ from .buttons import (
     SHOW_SEARCH_BUTTON,
     SPB_BUTTON,
     YES_BUTTON,
-    YES_TO_DO_BUTTON,
+    STAY_OPEN_SEARCH_BUTTON,
 )
 
 PROFILE_KEYBOARD = InlineKeyboardMarkup.from_column(
@@ -27,8 +27,7 @@ PROFILE_KEYBOARD = InlineKeyboardMarkup.from_column(
         InlineKeyboardButton(text=HIDE_SEARCH_BUTTON, callback_data="is_visible:False"),
         InlineKeyboardButton(text=EDIT_FORM_BUTTON, callback_data=EDIT_FORM_BUTTON),
         InlineKeyboardButton(
-            text=BTN_LABEL_GO_TO_MENU,
-            callback_data=BTN_LABEL_GO_TO_MENU
+            text=BTN_LABEL_GO_TO_MENU, callback_data=BTN_LABEL_GO_TO_MENU
         ),
     )
 )
@@ -62,7 +61,10 @@ FORM_SAVED_KEYBOARD = InlineKeyboardMarkup.from_column(
 
 FORM_VISIBLE_KEYBOARD = InlineKeyboardMarkup.from_column(
     button_column=(
-        InlineKeyboardButton(text=YES_TO_DO_BUTTON, callback_data=YES_TO_DO_BUTTON),
+        InlineKeyboardButton(
+            text=STAY_OPEN_SEARCH_BUTTON,
+            callback_data=STAY_OPEN_SEARCH_BUTTON
+        ),
         InlineKeyboardButton(text=HIDE_SEARCH_BUTTON, callback_data=HIDE_SEARCH_BUTTON),
     )
 )
